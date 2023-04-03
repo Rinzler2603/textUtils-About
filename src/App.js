@@ -1,14 +1,15 @@
 // import logo from './logo.svg';
 import { useState } from 'react';
 import './App.css';
-// import About from './comp/About';
+import About from './comp/About';
 import Navbar from './comp/Navbar';
 import Textform from './comp/Textform';
 import Alert from './comp/Alert';
-// import {
-//   createBrowserRouter,
-//   RouterProvider,
-// } from "react-router-dom";
+
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
 
 // let name="Hardik";
 
@@ -41,16 +42,16 @@ function App() {
   }
   
 
-  // const router = createBrowserRouter([
-  //   {
-  //     path: "/About",
-  //     element: <About />,
-  //   },
-  //   {
-  //     path:"/",
-  //     element: <Textform showAlert={showAlert} heading="Enter the text to analyse" mode={mode}/>
-  //   }
-  // ]);
+  const router = createBrowserRouter([
+    {
+      path: "/About",
+      element: <About mode={mode}/>,
+    },
+    {
+      path:"/",
+      element: <Textform showAlert={showAlert} heading="Enter the text to analyse" mode={mode}/>
+    }
+  ]);
     
   
 
@@ -58,11 +59,11 @@ function App() {
     <>
     <Navbar title="TextUtils" mode={mode} toggleMode={toggleMode} />
     <Alert alert={alert}/>
-    <br /><br />
+    
     <div className="container">
     <br />
-    <Textform showAlert={showAlert} heading="Enter the text to analyse" mode={mode}/>
-    {/* <RouterProvider router={router} /> */}
+    {/* <Textform showAlert={showAlert} heading="Enter the text to analyse" mode={mode}/> */}
+    <RouterProvider router={router} />
     </div>
    
     </>

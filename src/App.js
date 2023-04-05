@@ -3,13 +3,10 @@ import { useState } from 'react';
 import './App.css';
 import About from './comp/About';
 import Navbar from './comp/Navbar';
-import Textform from './comp/Textform';
+// import Textform from './comp/Textform';
 import Alert from './comp/Alert';
 
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+
 
 // let name="Hardik";
 
@@ -42,16 +39,7 @@ function App() {
   }
   
 
-  const router = createBrowserRouter([
-    {
-      path: "/About",
-      element: <About mode={mode}/>,
-    },
-    {
-      path:"/",
-      element: <Textform showAlert={showAlert} heading="Enter the text to analyse" mode={mode}/>
-    }
-  ]);
+  
     
   
 
@@ -63,7 +51,7 @@ function App() {
     <div className="container">
     <br />
     {/* <Textform showAlert={showAlert} heading="Enter the text to analyse" mode={mode}/> */}
-    <RouterProvider router={router} />
+    <About mode={mode}/>
     </div>
    
     </>

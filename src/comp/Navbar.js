@@ -25,11 +25,11 @@ export default function Navbar(props) {
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
 
             <li className="nav-item">
-              <a className="nav-link" aria-current="page" href="/">Home</a>
+              <a className="nav-link" aria-current="page" href="https://rinzler2603.github.io/textUtils/">Home</a>
             </li>
 
             <li className="nav-item">
-              <a className="nav-link" href="/About">About</a>
+              <a className="nav-link" href="/">About</a>
             </li>
           </ul>
 
